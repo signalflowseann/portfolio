@@ -295,7 +295,9 @@ h1 {
 .word {
   text-wrap: nowrap;
 }
+/* END HEADING */
 
+/* START EXPERIENCE */
 .experience-item {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -351,16 +353,44 @@ h1 {
 .tech-tag--db {
   border: 1px solid #ffdd57;
 }
-/* END HEADING */
+/* END EXPERIENCE */
+
+/* START PROJECTS */
+.projects-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.project-item-container {
+  border: 5px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 1, 0.4);
+  max-width: 300px;
+}
+
+.project-item-container:hover {
+  border-color: yellow;
+  border-radius: 7px;
+}
+
+.project-description {
+  padding: 1rem 0;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  width: 27rem;
+}
+/* END PROJECTS */
 
 @media screen and (max-width: 550px) {
-  /* .nav-item:not(.nav-item--mobile) {
-    display: none;
-  } */
-  /* .hamburger-menu {
-    display: flex;
-  } */
-
   html {
     font-size: 11px;
   }
