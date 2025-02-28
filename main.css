@@ -371,6 +371,10 @@ h1 {
   padding: 1rem;
   background-color: rgba(0, 0, 1, 0.4);
   max-width: 300px;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .project-item-container:hover {
@@ -379,6 +383,7 @@ h1 {
 }
 
 .project-description {
+  
   padding: 1rem 0;
 }
 
