@@ -346,6 +346,10 @@ h1 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  span:first-child {
+    padding-right: 8rem;
+  }
 }
 
 .job-title-date {
