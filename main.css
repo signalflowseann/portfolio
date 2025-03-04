@@ -119,10 +119,6 @@ header {
   .social-item-img {
     color: white;
   }
-
-  .nav-item--border-bottom {
-    border-color: white;
-  }
 }
 
 .dark.nav-link {
@@ -152,7 +148,7 @@ nav {
 }
 
 .nav-item--border-bottom {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
 }
 
 /* .nav-item:not(.nav-item--mobile) {
