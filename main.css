@@ -1,13 +1,11 @@
-@property --a { /* must register --a to animate it */
-	syntax: '<angle>';
-	initial-value: 0deg;
-	/* used only on pseudo, nowhere to be inherited, 
-	 * better perf if set false, see 
-	 * https://www.bram.us/2024/10/03/benchmarking-the-performance-of-css-property/ */
-	inherits: false
-}
 
 @layer reset, base, components, utilities;
+
+@property --a {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false
+}
 
 @layer reset {
   *, *::before, *::after {
@@ -142,7 +140,6 @@
     position: sticky;
     background: var(--clr-secondary);
     top: 0;
-    z-index: 2;
   }
 }
 
@@ -210,6 +207,7 @@
     align-items: center;
     padding: 0.25em;
     line-height: 0;
+    background-color: var(--clr-secondary);
   }
   
   button {
@@ -242,7 +240,6 @@
     margin-block-start: 3rem;
   }
   .experience-item {
-    margin-inline: 2rem;
     margin-block-end: 2rem;
     padding: 1rem;
   }
@@ -317,33 +314,23 @@
 
   .rainbow-gradient-border-hover {
     position: relative;
-    z-index: 1;
-    overflow: clip;
-    isolation: isolate;
-
     border: var(--border-width-default) solid var(--clr-primary);
     border-radius: var(--border-radius-default);
-    transition: border-color ease-in-out var(--transition-time-default);
   }
-
-  .rainbow-gradient-border-hover:hover {
-    /* border-color: transparent; */
-  }
-
+  
   .rainbow-gradient-border-hover:hover::before {
     content: '';
     position: absolute;
     z-index: -1;
 
-    /* inset: calc(var(--border-width-default) * -1); */
-    inset: -5px;
-    border: solid calc(var(--border-width-default) * 2);
+    inset: calc(var(--border-width-default) * -1 * 3);
+    border: solid calc(var(--border-width-default) * 3);
     border-image:
       conic-gradient(from var(--a), #669900, #99cc33, #ccee66, 
           #006699, #3399cc, #990066, #cc3399, 
           #ff6600, #ff9900, #ffcc00, #669900) 1;
 
-    filter: blur(1px);
+    filter: blur(10px);
     animation: a 4s linear infinite;
   }
 }
@@ -361,6 +348,5 @@
     right: 0;
   }
 }
-
 
 @keyframes a { to { --a: 1turn } }
