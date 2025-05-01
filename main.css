@@ -94,6 +94,7 @@
     --border-width-default: 3px;
 
     --transition-time-default: 0.25s;
+    --linear-gradient-default: linear-gradient(to right, orange, yellow, green, cyan, purple, violet);
   }
 
   h1 {
@@ -109,12 +110,22 @@
   
   p, li span {
     font-size: clamp(var(--fs-500), 5vw, var(--fs-600));
+    line-height: 1.5;
     color: var(--clr-primary)
   }
 
   a {
     font-size: clamp(var(--fs-400), 5vw, var(--fs-600));
     color: var(--clr-primary);
+  }
+
+  .job-title a,
+  .job-description a {
+    background-image: var(--linear-gradient-default);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 100% 2px;
+    width:fit-content;
   }
 }
 
@@ -175,7 +186,7 @@
     height: 3px;
     transform: scaleX(0);
     transform-origin: left;
-    background: linear-gradient(to right, orange, yellow, green, cyan, purple, violet); 
+    background: var(--linear-gradient-default);
   }
 
   .nav-item--social:not(.logo)::before {
@@ -219,7 +230,7 @@
     display: grid;
     gap: var(--size-500);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: var(--size-500);
+    margin-block-start: 3rem;
   }
 
   .project-item-container {
@@ -227,10 +238,8 @@
   } 
 
   .project-image {
-    width: 100%;
-    height: auto;
+    object-fit: contain;
     border-radius: var(--border-radius-default);
-    width: 27rem;
   }
 
   .project-description {
@@ -308,7 +317,7 @@
 
   .rainbow-gradient-background {
     width: max-content;
-    background: linear-gradient(to right, orange, yellow, green, cyan, purple, violet); 
+    background: var(--linear-gradient-default);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
