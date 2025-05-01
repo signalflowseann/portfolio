@@ -118,15 +118,6 @@
     font-size: clamp(var(--fs-400), 5vw, var(--fs-600));
     color: var(--clr-primary);
   }
-
-  .job-title a,
-  .job-description a {
-    background-image: var(--linear-gradient-default);
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-size: 100% 2px;
-    width:fit-content;
-  }
 }
 
 @layer layout {
@@ -280,13 +271,24 @@
   }
 
   .job-title {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: var(--size-400);
+    container: job-title / inline-size;
 
     span:first-child {
       text-wrap: pretty;
     }
+  }
+
+  .job-title a,
+  .job-description a {
+    background-image: var(--linear-gradient-default);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 100% 2px;
+    width:fit-content;
   }
 
   .job-title-date {
@@ -357,6 +359,18 @@
     rotate: 0deg;
     bottom: -0.3rem;
     right: 0;
+  }
+}
+
+/* @container job-title (width < 200px) {
+  .job-title {
+    flex-wrap: wrap;
+  }
+} */
+
+@media screen and (max-width: 800px) {
+  .job-title {
+    flex-wrap: wrap;
   }
 }
 
