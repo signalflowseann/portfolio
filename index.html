@@ -2,6 +2,7 @@
 active state hover
 vertically center main page content
 grid better for projects page
+
 -->
 
 <!DOCTYPE html>
@@ -19,8 +20,10 @@ grid better for projects page
   <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="main.css">
+  
 </head>
 <body>
+  <script src="index.js"></script>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="email" viewBox="0 0 24 24">
       <path
@@ -44,17 +47,17 @@ grid better for projects page
   <header class="primary-header | primary-padding">
     <nav class="primary-nav">
       <ul role="list" class="nav-items">
-        <li class="nav-item logo | rainbow-gradient-border-hover">
+        <li id="home" class="nav-item logo | rainbow-gradient-border-hover">
           <a class="nav-link" href="index.html">
             SN
           </a>
         </li>
-        <li class="nav-item">
+        <li id="experience" class="nav-item">
           <a class="nav-link" href="experience.html">
             Experience
           </a>
         </li>
-        <li class="nav-item">
+        <li id="projects" class="nav-item">
           <a class="nav-link" href="projects.html">
             Projects
           </a>

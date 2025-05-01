@@ -165,6 +165,12 @@
     position: relative;
   }
 
+
+
+
+  .nav-item.active {
+    color: blue
+  }
   .nav-item:not(.logo)::before {
     content: "";
     display: block;
