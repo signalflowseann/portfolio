@@ -137,7 +137,7 @@
   }
 
   .primary-header {
-    position: sticky;
+    position: sticky; 
     background: var(--clr-secondary);
     top: 0;
     z-index: 1;
@@ -229,7 +229,7 @@
   .project-image {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: var(--border-radius-default);
     width: 27rem;
   }
 
@@ -240,9 +240,11 @@
   .experience-item:first-child {
     margin-block-start: 3rem;
   }
+
   .experience-item {
     margin-block-end: 2rem;
     padding: 1rem;
+    background-color: var(--clr-secondary);
   }
 
   .tech-tag {
@@ -258,20 +260,20 @@
   .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: var(--size-200);
     margin-block: 1.5rem 0.5rem;
   }
 
   .seperator {
-    height: 2px;
-    border: 2px dotted var(--clr-primary);
+    height: var(--border-width-default);
     margin: 1rem 0;
+    border: var(--border-width-default) dotted var(--clr-primary);
   }
 
   .job-title {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: var(--size-400);
 
     span:first-child {
       text-wrap: pretty;
@@ -305,12 +307,11 @@
   }
 
   .rainbow-gradient-background {
-    width: max-content; 
+    width: max-content;
     background: linear-gradient(to right, orange, yellow, green, cyan, purple, violet); 
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
   }
 
   .rainbow-gradient-border-hover {
