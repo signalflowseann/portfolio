@@ -1,0 +1,139 @@
+<!-- TODO
+switch months back to abbreviated names instead of numbers
+add about page
+vertically center main page content?
+grid better for projects page
+add resume download button
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sean Nealon | Home</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="./images/icons/favicon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="main.css">
+  
+</head>
+<body>
+  <script src="index.js"></script>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="email" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="m 23.999999,6.503144 v 14.925428 a 2.1176466,2.5714285 0 0 1 -2.117646,2.571429 H 2.117651 A 2.1176466,2.5714285 0 0 1 5e-6,21.428572 V 6.503144 l 8.804468,9.064285 a 4.9411753,5.9999996 0 0 0 6.391058,0 z M 21.882353,10e-7 a 2.1437642,2.6031427 0 0 1 0.755294,0.168001 2.1049407,2.5559999 0 0 1 0.886588,0.779999 2.1282348,2.5842856 0 0 1 0.309176,0.621429 c 0.09176,0.264 0.148235,0.550286 0.162353,0.851143 l 0.0042,0.150857 V 3.428573 L 13.374355,14.434287 a 2.1176466,2.5714285 0 0 1 -2.643529,0.101999 L 10.625649,14.433429 5e-6,3.428573 V 2.57143 A 2.1105878,2.562857 0 0 1 1.162593,0.276002 2.1134113,2.5662856 0 0 1 2.117651,10e-7 Z"
+      />
+    </symbol>
+    <symbol id="github" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M 12,0 C 5.37,0 0,5.5058279 0,12.303526 0,17.747836 3.435,22.346279 8.205,23.976497 8.805,24.084152 9.03,23.715047 9.03,23.392079 9.03,23.09987 9.015,22.130968 9.015,21.100547 6,21.669585 5.22,20.346956 4.98,19.654883 4.845,19.301157 4.26,18.209219 3.75,17.91701 3.33,17.686319 2.73,17.117281 3.735,17.101901 c 0.945,-0.01538 1.62,0.892006 1.845,1.261112 1.08,1.860908 2.805,1.338008 3.495,1.015041 C 9.18,18.578324 9.495,18.040045 9.84,17.732457 7.17,17.424869 4.38,16.36369 4.38,11.657591 4.38,10.319583 4.845,9.2122652 5.61,8.3510184 5.49,8.0434302 5.07,6.7823188 5.73,5.0905839 c 0,0 1.005,-0.3229675 3.3,1.2611115 0.96,-0.2768294 1.98,-0.415244 3,-0.415244 1.02,0 2.04,0.1384146 3,0.415244 2.295,-1.5994584 3.3,-1.2611115 3.3,-1.2611115 0.66,1.6917349 0.24,2.9528463 0.12,3.2604345 0.765,0.8612468 1.23,1.9531846 1.23,3.3065726 0,4.721478 -2.805,5.767278 -5.475,6.074866 0.435,0.384485 0.81,1.122697 0.81,2.276152 0,1.645597 -0.015,2.968226 -0.015,3.38347 0,0.322968 0.225,0.707453 0.825,0.584418 A 12.0195,12.323519 0 0 0 24,12.303526 C 24,5.5058279 18.63,0 12,0 Z"
+      />
+    </symbol>
+    <symbol id="linkedin" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M 22.2,0 H 1.8 A 1.8,1.8 0 0 0 0,1.8 V 22.2 A 1.8,1.8 0 0 0 1.8,24 H 22.2 A 1.8,1.8 0 0 0 24,22.2 V 1.8 A 1.8,1.8 0 0 0 22.2,0 Z M 7.2,20.4 H 3.6 V 9.6 H 7.2 Z M 5.4,7.5 A 2.1,2.1 0 1 1 7.56,5.4 2.136,2.136 0 0 1 5.4,7.5 Z m 15,12.9 h -3.6 v -5.688 c 0,-1.704 -0.72,-2.316 -1.656,-2.316 a 2.088,2.088 0 0 0 -1.944,2.232 0.792,0.792 0 0 0 0,0.168 V 20.4 H 9.6 V 9.6 h 3.48 v 1.56 a 3.732,3.732 0 0 1 3.24,-1.68 c 1.86,0 4.032,1.032 4.032,4.392 z"
+      />
+    </symbol>
+  </svg>
+  <header class="primary-header | primary-padding">
+    <nav class="primary-nav">
+      <ul role="list" class="nav-items">
+        <li id="home" class="nav-item logo | rainbow-gradient-border-hover">
+          <a class="nav-link" href="index.html">
+            SN
+          </a>
+        </li>
+        <li id="experience" class="nav-item">
+          <a class="nav-link" href="experience.html">
+            Experience
+          </a>
+        </li>
+        <li id="projects" class="nav-item">
+          <a class="nav-link" href="projects.html">
+            Projects
+          </a>
+        </li>
+        <li id="about" class="nav-item">
+          <a class="nav-link" href="about.html">
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="main-content-section | primary-padding">
+      <h1 class="visually-hidden">About</h1>
+      <div class="about-container">
+        <img
+          src="./images/profile.jpg"
+          alt="Sean Nealon's profile picture"
+          class="profile-picture | rainbow-gradient-border-hover"
+        />
+        <p class="about-description">
+          Hi I'm Sean - a full-stack web developer based in the beautiful city of Boston.
+          I love creating technology that changes how people interact with and see the world. 
+          My background in music and sound design has given me a unique perspective on how to create
+          interactive applications that inspire and engage users. When I'm not coding, you can find me either watching sports, playing music, hiking, or doing all of them at the same time!
+        </p>
+      </div>
+    </section>
+    
+  </main>
+  <footer class="primary-footer | primary-padding">
+    <nav class="social-nav" aria-label="Social media links">
+      <ul list-role="list" class="nav-items nav-items--social">
+        <li class="nav-item nav-item--social">
+          <a
+            class="nav-link"
+            href="mailto:signalflowsean@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="nav-link-item-img" aria-hidden="true">
+              <use href="#email"></use>
+            </svg>
+            <span class="visually-hidden">Contact me!</span>
+          </a>
+        </li>
+        <li class="nav-item nav-item--social">
+          <a
+            class="nav-link"
+            href="https://github.com/signalflowseann"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="nav-link-item-img" aria-hidden="true">
+              <use href="#github"></use>
+            </svg>
+            <span class="visually-hidden">GitHub Profile</span>
+          </a>
+        </li>
+        <li class="nav-item nav-item--social">
+          <a
+            class="nav-link"
+            href="https://www.linkedin.com/in/sean-nealon-033423124/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="nav-link-item-img" aria-hidden="true">
+              <use href="#linkedin"></use>
+            </svg>
+            <span class="visually-hidden">LinkedIn Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -1,21 +1,15 @@
+const PAGES = {
+  'index.html': 'home',
+  'experience.html': 'experience',
+  'projects.html': 'projects',
+  'about.html': 'about'
+}
+
 const setActiveNavItem = () => {
   const currentPage = window.location.pathname.split('/').pop();
-
-  const PAGES = {
-    'index.html': 'home',
-    'experience.html': 'experience',
-    'projects.html': 'projects',
-  };
-
   const activeNavId = PAGES[currentPage];
-
-  // If a matching nav-item ID is found, add the 'active' class
-  if (activeNavId) {
-    const activeNavItem = document.getElementById(activeNavId);
-    if (activeNavItem) {
-      activeNavItem.classList.add('rainbow-gradient-background');
-    }
-  }
+  const navItem = activeNavId ? document.getElementById(activeNavId) : PAGES['index.html'];
+  navItem.classList.add('rainbow-gradient-background');
 }
 
 // Call the function when the DOM is fully loaded

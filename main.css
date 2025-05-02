@@ -1,4 +1,3 @@
-
 @layer reset, base, components, utilities;
 
 @property --a {
@@ -165,12 +164,6 @@
     position: relative;
   }
 
-
-
-
-  .nav-item.active {
-    color: blue
-  }
   .nav-item:not(.logo)::before {
     content: "";
     display: block;
@@ -214,13 +207,21 @@
     display: inline flex;
     justify-content: center;
     align-items: center;
-    padding: 0.25em;
+
     line-height: 0;
     background-color: var(--clr-secondary);
+
+    a {
+      padding: 0.25em;
+    }
   }
   
-  button {
+  .primary-button {
     min-width: fit-content;
+    display: block;
+    padding: 0.5em 1em;
+    text-align: center;
+    margin-top: 2rem;
   }
 
   .projects-container {
@@ -263,6 +264,18 @@
     font-weight: var(--fw-semi-bold);
   }
 
+  .tech-tag.tech-tag--lang {
+    background: gold;
+  }
+
+  .tech-tag.tech-tag--tool {
+    background-color: #645DD7;
+  }
+
+  .tech-tag.tech-tag--db {
+    background-color: #FB62F6;
+  }
+
   .tags {
     display: flex;
     flex-wrap: wrap;
@@ -299,6 +312,27 @@
 
   .job-title-date {
     text-wrap-mode: nowrap;
+  }
+
+  .about-container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--size-500);
+  }
+
+  .profile-picture {
+    height: 100%;
+    width: clamp(15rem, 10vw, 20rem);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-block-end: var(--size-500);
+  }
+
+  .about-description {
+    padding-right: min(var(--size-900), 12vw);
   }
 }
 
@@ -337,7 +371,8 @@
     border-radius: var(--border-radius-default);
   }
   
-  .rainbow-gradient-border-hover:hover::before {
+  .rainbow-gradient-border-hover:hover::before,
+  .rainbow-gradient-border-hover:active::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -345,8 +380,8 @@
     inset: calc(var(--border-width-default) * -1 * 3);
     border: solid calc(var(--border-width-default) * 3);
     border-image:
-      conic-gradient(from var(--a), #669900, #99cc33, #ccee66, 
-          #006699, #3399cc, #990066, #cc3399, 
+      conic-gradient(from var(--a), #669900, #99cc33, #ccee66,
+          #006699, #3399cc, #990066, #cc3399,
           #ff6600, #ff9900, #ffcc00, #669900) 1;
 
     filter: blur(10px);
@@ -368,12 +403,6 @@
   }
 }
 
-/* @container job-title (width < 200px) {
-  .job-title {
-    flex-wrap: wrap;
-  }
-} */
-
 @media screen and (max-width: 800px) {
   .job-title {
     flex-wrap: wrap;
@@ -381,3 +410,5 @@
 }
 
 @keyframes a { to { --a: 1turn } }
+
+
