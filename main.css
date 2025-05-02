@@ -208,7 +208,7 @@
     justify-content: center;
     align-items: center;
 
-    line-height: 0;
+    line-height: 1;
     background-color: var(--clr-secondary);
 
     a {
@@ -332,8 +332,7 @@
   }
 
   .profile-picture {
-    height: 100%;
-    width: clamp(15rem, 10vw, 20rem);
+    width: min(600px, 100%);
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
@@ -341,8 +340,10 @@
     margin-block-end: var(--size-500);
   }
 
-  .about-description {
-    padding-right: min(var(--size-900), 12vw);
+  .about-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 
